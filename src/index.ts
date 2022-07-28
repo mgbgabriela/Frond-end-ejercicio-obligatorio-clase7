@@ -11,9 +11,12 @@ const sumarComentarios = (): void => {
 boton1.addEventListener("click", sumarComentarios);
 
 const restarComentarios = (): void => {
-  total--;
-  alert("Este es el comentario número" + total);
-  cantidad?.innerHTML = total;
+  if (total > 0) {
+    total--;
+    alert("Este es el comentario número" + total);
+    cantidad?.innerHTML = total;
+  } else {
+    total = total;
+  }
 };
-
 boton2.addEventListener("click", restarComentarios);
